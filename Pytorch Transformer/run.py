@@ -96,7 +96,7 @@ train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
 
 
 # Create dataloaders for train and validation
-train_dataloader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+train_dataloader = DataLoader(train_dataset, batch_size=64, shuffle=False)  #시계열 적인 해석이기에 batch가 뒤섞이면 안됨.
 val_dataloader = DataLoader(val_dataset, batch_size=64, shuffle=False)
 
 
